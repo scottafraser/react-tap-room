@@ -8,17 +8,11 @@ function Header() {
     <Switch>
       <div>
         <h1 className={styles.header}>Beers!</h1>
-        <ul className="header">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/kegList">Keg List</Link>
-          </li>
-          <li>
-            <Link to="/newKegForm">Add a Keg</Link>
-          </li>
-        </ul>
+        <h4 className={styles.nav}>
+          <Link to="/">Home </Link>
+          <Link to="/kegList">Keg List </Link>
+          <Link to="/newKegForm">Add a Keg</Link>
+        </h4>
       </div>
     </Switch>
   );

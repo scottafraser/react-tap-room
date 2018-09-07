@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { v4 } from "uuid";
+import styles from "./App.css";
 
 function NewKegForm(props) {
   let _name = null;
@@ -30,7 +31,7 @@ function NewKegForm(props) {
   }
 
   return (
-    <div>
+    <div className={styles.form}>
       <form onSubmit={handleNewKegFormSubmission}>
         <input
           type="text"
@@ -40,6 +41,8 @@ function NewKegForm(props) {
             _name = input;
           }}
         />
+        <br />
+        <br />
         <input
           type="text"
           id="brewer"
@@ -48,6 +51,8 @@ function NewKegForm(props) {
             _brewer = input;
           }}
         />
+        <br />
+        <br />
         <textarea
           id="description"
           placeholder="Describe the beer"
@@ -55,6 +60,8 @@ function NewKegForm(props) {
             _description = textarea;
           }}
         />
+        <br />
+        <br />
         <textarea
           id="abv"
           placeholder="Describe your abv."
@@ -62,6 +69,8 @@ function NewKegForm(props) {
             _abv = textarea;
           }}
         />
+        <br />
+        <br />
         <textarea
           id="price"
           placeholder="Set a price"
@@ -69,6 +78,8 @@ function NewKegForm(props) {
             _price = textarea;
           }}
         />
+        <br />
+        <br />
         <textarea
           id="remaining"
           placeholder="Quantity left"
@@ -76,6 +87,8 @@ function NewKegForm(props) {
             _remaining = textarea;
           }}
         />
+        <br />
+        <br />
         <button type="submit">Add Keg</button>
       </form>
     </div>

@@ -5,6 +5,7 @@ import Splash from "./Splash";
 import KegList from "./KegList";
 import Error404 from "./Error404";
 import NewKegControl from "./NewKegController";
+import styles from "./App.css";
 
 class Main extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class Main extends Component {
   render() {
     return (
       <HashRouter>
-        <div className="content">
+        <div className={styles.content}>
           <Header />
           <Switch>
             <Route exact path="/" component={Splash} />
