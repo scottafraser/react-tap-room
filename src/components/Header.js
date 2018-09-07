@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, HashRouter } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -13,6 +13,9 @@ function Header() {
           </li>
           <li>
             <Link to="/kegList">Keg List</Link>
+          </li>
+          <li>
+            <Link to="/newKegForm">Add a Keg</Link>
           </li>
         </ul>
       </div>
