@@ -1,4 +1,13 @@
 .list {
-  color: red;
-  font-size: 5em;
+  box-shadow: 2em;
+  font-size: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.kegCard {
+  width: 30%;
+  padding: 5%;
+  height: 30%;
 }
