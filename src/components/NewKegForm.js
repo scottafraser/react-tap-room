@@ -3,21 +3,30 @@ import PropTypes from "prop-types";
 import { v4 } from "uuid";
 
 function NewKegForm(props) {
-  let _names = null;
-  let _location = null;
-  let _issue = null;
+  let _name = null;
+  let _brewer = null;
+  let _description = null;
+  let _abv = null;
+  let _price = null;
+  let _remaining = null;
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
     props.onNewKegCreation({
-      names: _names.value,
-      location: _location.value,
-      issue: _issue.value,
+      name: _name.value,
+      brewer: _brewer.value,
+      description: _description.value,
+      abv: _abv.value,
+      price: _price.value,
+      remaining: _remaining.value,
       id: v4()
     });
-    _names.value = "";
-    _location.value = "";
-    _issue.value = "";
+    _name.value = "";
+    _brewer.value = "";
+    _description.value = "";
+    _abv.value = "";
+    _price.value = "";
+    _remaining.value = "";
   }
 
   return (
@@ -25,28 +34,49 @@ function NewKegForm(props) {
       <form onSubmit={handleNewKegFormSubmission}>
         <input
           type="text"
-          id="names"
-          placeholder="Pair Names"
+          id="name"
+          placeholder="Name"
           ref={input => {
-            _names = input;
+            _name = input;
           }}
         />
         <input
           type="text"
-          id="location"
-          placeholder="Locations"
+          id="brewer"
+          placeholder="Brewery"
           ref={input => {
-            _location = input;
+            _brewer = input;
           }}
         />
         <textarea
-          id="issue"
-          placeholder="Describe your issue."
+          id="description"
+          placeholder="Describe the beer"
           ref={textarea => {
-            _issue = textarea;
+            _description = textarea;
           }}
         />
-        <button type="submit">Help!</button>
+        <textarea
+          id="abv"
+          placeholder="Describe your abv."
+          ref={textarea => {
+            _abv = textarea;
+          }}
+        />
+        <textarea
+          id="price"
+          placeholder="Set a price"
+          ref={textarea => {
+            _price = textarea;
+          }}
+        />
+        <textarea
+          id="remaining"
+          placeholder="Quantity left"
+          ref={textarea => {
+            _remaining = textarea;
+          }}
+        />
+        <button type="submit">Add Keg</button>
       </form>
     </div>
   );
