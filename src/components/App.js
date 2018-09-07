@@ -17,7 +17,6 @@ class Main extends Component {
 
   handleAddingNewKegToList(newKeg) {
     var newMasterKegList = this.state.masterKegList.slice();
-    newKeg.formattedWaitTime = newKeg.timeOpen.fromNow(true);
     newMasterKegList.push(newKeg);
     this.setState({ masterKegList: newMasterKegList });
   }
@@ -29,7 +28,12 @@ class Main extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={Splash} />
-            <Route path="/kegList" component={KegList} />
+            <Route
+              path="/kegList"
+              render={() => (
+                <KegList onNewKegCreation={this.state.masterKegList} />
+              )}
+            />
             <Route path="/NewKegForm" component={NewKegForm} />
             <Route component={Error404} />
           </Switch>

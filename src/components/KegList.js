@@ -2,64 +2,66 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Keg from "./Keg";
 import styles from "./App.css";
+import PropTypes from "prop-types";
 
-const masterKegList = [
-  {
-    name: "Ruby Zozzle",
-    brewer: "Hi-Wheel",
-    description: "Sparkling Wine & Grapefruit",
-    abv: "6.8%",
-    price: "7",
-    remaining: "20"
-  },
-  {
-    name: "Tart N Juicy",
-    brewer: "Epic",
-    description: "Sour IPA",
-    abv: "4.5%",
-    price: "6",
-    remaining: "60"
-  },
-  {
-    name: "Hamm's",
-    brewer: "Miller/Coors",
-    description: "American Lager",
-    abv: "4.7%",
-    price: "3",
-    remaining: "65"
-  },
-  {
-    name: "Prismatic",
-    brewer: "Ninkasi",
-    description: "Juicy IPA",
-    abv: "5.9%",
-    price: "6",
-    remaining: "75"
-  },
-  {
-    name: "Juicy Haze",
-    brewer: "New Belgium",
-    description: "India Pale Ale",
-    abv: "7.5%",
-    price: "6",
-    remaining: "18"
-  },
-  {
-    name: "8 Hop",
-    brewer: "New Belgium",
-    description: "Pale Ale",
-    abv: "5.5%",
-    price: "6",
-    remaining: "58"
-  }
-];
+// const masterKegList = [
+//   {
+//     name: "Ruby Zozzle",
+//     brewer: "Hi-Wheel",
+//     description: "Sparkling Wine & Grapefruit",
+//     abv: "6.8%",
+//     price: "7",
+//     remaining: "20"
+//   },
+//   {
+//     name: "Tart N Juicy",
+//     brewer: "Epic",
+//     description: "Sour IPA",
+//     abv: "4.5%",
+//     price: "6",
+//     remaining: "60"
+//   },
+//   {
+//     name: "Hamm's",
+//     brewer: "Miller/Coors",
+//     description: "American Lager",
+//     abv: "4.7%",
+//     price: "3",
+//     remaining: "65"
+//   },
+//   {
+//     name: "Prismatic",
+//     brewer: "Ninkasi",
+//     description: "Juicy IPA",
+//     abv: "5.9%",
+//     price: "6",
+//     remaining: "75"
+//   },
+//   {
+//     name: "Juicy Haze",
+//     brewer: "New Belgium",
+//     description: "India Pale Ale",
+//     abv: "7.5%",
+//     price: "6",
+//     remaining: "18"
+//   },
+//   {
+//     name: "8 Hop",
+//     brewer: "New Belgium",
+//     description: "Pale Ale",
+//     abv: "5.5%",
+//     price: "6",
+//     remaining: "58"
+//   }
+// ];
 
-function KegList() {
+function KegList(props) {
+  console.log(props.kegList);
   return (
     <div>
       <h2>LIST OF KEGS</h2>
       <div className={styles.list}>
-        {masterKegList.map((keg, index) => (
+        {props.kegList.map(keg => (
           <Keg
             name={keg.name}
             brewer={keg.brewer}
@@ -67,7 +69,7 @@ function KegList() {
             abv={keg.abv}
             price={keg.price}
             remaining={keg.remaining}
-            key={index}
+            key={keg.id}
           />
         ))}
       </div>
@@ -77,5 +79,9 @@ function KegList() {
     </div>
   );
 }
+
+KegList.propTypes = {
+  kegList: PropTypes.array
+};
 
 export default KegList;
