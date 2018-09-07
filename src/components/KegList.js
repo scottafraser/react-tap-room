@@ -55,15 +55,15 @@ const masterKegList = [
 ];
 
 function KegList() {
-  var kegListStyles = {
-    backgroundColor: "#ecf0f1",
-    fontFamily: "sans-serif",
-    paddingTop: "50px",
-    textAlign: "center"
-  };
+  // var kegListStyles = {
+  //   backgroundColor: "#ecf0f1",
+  //   fontFamily: "sans-serif",
+  //   paddingTop: "50px",
+  //   textAlign: "center"
+  // };
 
   return (
-    <div style={kegListStyles}>
+    <div>
       <h2>LIST OF KEGS</h2>
       <div className={styles.list}>
         {masterKegList.map((keg, index) => (
