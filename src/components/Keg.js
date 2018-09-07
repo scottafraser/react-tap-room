@@ -1,15 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-function Keg() {
+function Keg(props) {
   return (
     <div>
-      <h2>The page you are looking for does not exist!</h2>
-      <h3>
-        Would you like to return <Link to="/">home</Link> instead?
-      </h3>
+      <h2>{props.name}</h2>
+      <h3>{props.brewer}</h3>
+      <p>
+        {props.description}
+        {props.abv}
+        {props.price}
+      </p>
     </div>
   );
 }
+
+Keg.propTypes = {
+  heading: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+};
 
 export default Keg;
