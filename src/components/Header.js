@@ -14,9 +14,6 @@ function Header() {
           <li>
             <Link to="/kegList">Keg List</Link>
           </li>
-          <li>
-            <Link to="/contact" />
-          </li>
         </ul>
       </div>
     </Switch>

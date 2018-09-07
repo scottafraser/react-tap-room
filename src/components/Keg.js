@@ -6,18 +6,19 @@ function Keg(props) {
     <div>
       <h2>{props.name}</h2>
       <h3>{props.brewer}</h3>
-      <p>
-        {props.description}
-        {props.abv}
-        {props.price}
-      </p>
+      <p>Style: {props.description}</p>
+      <p>{props.abv} ABV </p>
+      <p>$ {props.price}</p>
     </div>
   );
 }
 
 Keg.propTypes = {
-  heading: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  brewer: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  abv: PropTypes.string,
+  price: PropTypes.string
 };
 
 export default Keg;
