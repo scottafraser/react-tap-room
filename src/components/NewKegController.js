@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ConfirmationQuestions from "./ConfirmationQuestions";
 import NewKegForm from "./NewKegForm";
 
 class NewKegController extends React.Component {

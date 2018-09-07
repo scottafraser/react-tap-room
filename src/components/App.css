@@ -11,3 +11,8 @@
   padding: 5%;
   height: 30%;
 }
+
+.header {
+  font-size: 5em;
+  color: blue;
+}

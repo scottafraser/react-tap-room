@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Keg from "./Keg";
 import styles from "./App.css";
 import PropTypes from "prop-types";
@@ -69,19 +68,19 @@ function KegList(props) {
             abv={keg.abv}
             price={keg.price}
             remaining={keg.remaining}
+            currentRouterPath={props.currentRouterPath}
             key={keg.id}
           />
         ))}
       </div>
-      <h3>
-        Would you like to return <Link to="/">Home</Link> instead?
-      </h3>
+      <h3> All the beer</h3>
     </div>
   );
 }
 
 KegList.propTypes = {
-  kegList: PropTypes.array
+  kegList: PropTypes.array,
+  currentRouterPath: PropTypes.string
 };
 
 export default KegList;

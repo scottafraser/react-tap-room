@@ -4,7 +4,7 @@ import Header from "./Header";
 import Splash from "./Splash";
 import KegList from "./KegList";
 import Error404 from "./Error404";
-import NewKegForm from "./NewKegForm";
+import NewKegControl from "./NewKegController";
 
 class Main extends Component {
   constructor(props) {
@@ -30,11 +30,16 @@ class Main extends Component {
             <Route exact path="/" component={Splash} />
             <Route
               path="/kegList"
+              render={() => <KegList kegList={this.state.masterKegList} />}
+            />
+            <Route
+              path="/NewKegForm"
               render={() => (
-                <KegList onNewKegCreation={this.state.masterKegList} />
+                <NewKegControl
+                  onNewKegCreation={this.handleAddingNewKegToList}
+                />
               )}
             />
-            <Route path="/NewKegForm" component={NewKegForm} />
             <Route component={Error404} />
           </Switch>
         </div>
