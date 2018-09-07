@@ -18,6 +18,10 @@ A React app that uses interactive flashcards for the purposes of studying variou
 - `yarn build` bundles the app into static files for production
 - `yarn test` starts the test runner
 
+## Route Path
+
+![alt text](./route_path.jpg)
+
 ## Contribution Requirements
 
 1. Clone the repo

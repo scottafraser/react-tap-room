@@ -55,13 +55,6 @@ const masterKegList = [
 ];
 
 function KegList() {
-  // var kegListStyles = {
-  //   backgroundColor: "#ecf0f1",
-  //   fontFamily: "sans-serif",
-  //   paddingTop: "50px",
-  //   textAlign: "center"
-  // };
-
   return (
     <div>
       <h2>LIST OF KEGS</h2>
