@@ -6,6 +6,7 @@ import KegList from "./KegList";
 import Error404 from "./Error404";
 import NewKegControl from "./NewKegController";
 import styles from "./App.css";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 class Main extends Component {
   constructor(props) {
@@ -25,25 +26,27 @@ class Main extends Component {
   render() {
     return (
       <HashRouter>
-        <div className={styles.content}>
-          <Header />
-          <Switch>
-            <Route exact path="/" component={Splash} />
-            <Route
-              path="/kegList"
-              render={() => <KegList kegList={this.state.masterKegList} />}
-            />
-            <Route
-              path="/NewKegForm"
-              render={() => (
-                <NewKegControl
-                  onNewKegCreation={this.handleAddingNewKegToList}
-                />
-              )}
-            />
-            <Route component={Error404} />
-          </Switch>
-        </div>
+        <MuiThemeProvider>
+          <div className={styles.content}>
+            <Header />
+            <Switch>
+              <Route exact path="/" component={Splash} />
+              <Route
+                path="/kegList"
+                render={() => <KegList kegList={this.state.masterKegList} />}
+              />
+              <Route
+                path="/NewKegForm"
+                render={() => (
+                  <NewKegControl
+                    onNewKegCreation={this.handleAddingNewKegToList}
+                  />
+                )}
+              />
+              <Route component={Error404} />
+            </Switch>
+          </div>
+        </MuiThemeProvider>
       </HashRouter>
     );
   }

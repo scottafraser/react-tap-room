@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { v4 } from "uuid";
 import styles from "./App.css";
+import RaisedButton from "material-ui/RaisedButton";
 
 function NewKegForm(props) {
   let _name = null;
@@ -89,7 +90,13 @@ function NewKegForm(props) {
         />
         <br />
         <br />
-        <button type="submit">Add Keg</button>
+        <RaisedButton
+          type="submit"
+          label="Primary"
+          primary={true}
+          //   style={style}
+        />
+        {/* <button>Add Keg</button> */}
       </form>
     </div>
   );
