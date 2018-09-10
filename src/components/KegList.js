@@ -58,11 +58,11 @@ function KegList(props) {
   console.log(props);
   return (
     <div>
-      <div className={styles.list}>
+      {/* <div className={styles.list}>
         {props.kegList.map((keg, id) => (
           <Keg {...keg} key={id} />
         ))}
-      </div>
+      </div> */}
       <div className={styles.list}>
         {masterKegList.map((keg, index) => (
           <Keg {...keg} key={index} />
@@ -95,3 +95,34 @@ KegList.propTypes = {
 };
 
 export default KegList;
+
+// function KegList(props) {
+//   console.log(props.kegList);
+//   return (
+//     <div>
+//       <h2>LIST OF KEGS</h2>
+//       <div className={styles.list}>
+//         {props.kegList.map(keg => (
+//           <Keg
+//             name={keg.name}
+//             brewer={keg.brewer}
+//             description={keg.description}
+//             abv={keg.abv}
+//             price={keg.price}
+//             remaining={keg.remaining}
+//             currentRouterPath={props.currentRouterPath}
+//             key={keg.id}
+//           />
+//         ))}
+//       </div>
+//       <h3> All the beer</h3>
+//     </div>
+//   );
+// }
+
+// KegList.propTypes = {
+//   kegList: PropTypes.array,
+//   currentRouterPath: PropTypes.string
+// };
+
+// export default KegList;

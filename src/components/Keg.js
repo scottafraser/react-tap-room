@@ -10,11 +10,11 @@ function Keg(props) {
     <div className={styles.kegCard}>
       <Card>
         <CardHeader
+          avatar={beerkeg}
           title={props.name}
           subtitle={props.brewer}
           actAsExpander={true}
           showExpandableButton={true}
-          avatar={beerkeg}
         />
         <CardActions>
           <FlatButton label="Edit" />
@@ -30,8 +30,8 @@ function Keg(props) {
 }
 
 Keg.propTypes = {
-  name: PropTypes.string.isRequired,
-  brewer: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  brewer: PropTypes.string,
   description: PropTypes.string,
   abv: PropTypes.string,
   price: PropTypes.string

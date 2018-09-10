@@ -12,15 +12,15 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: []
+      addKegList: []
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
 
   handleAddingNewKegToList(newKeg) {
-    var newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.push(newKeg);
-    this.setState({ masterKegList: newMasterKegList });
+    var newAddKegList = this.state.addKegList.slice();
+    newAddKegList.push(newKeg);
+    this.setState({ addKegList: newAddKegList });
   }
 
   render() {
@@ -33,7 +33,7 @@ class Main extends Component {
               <Route exact path="/" component={Splash} />
               <Route
                 path="/kegList"
-                render={() => <KegList kegList={this.state.masterKegList} />}
+                render={() => <KegList kegList={this.state.addKegList} />}
               />
               <Route
                 path="/NewKegForm"
