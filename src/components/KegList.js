@@ -58,11 +58,11 @@ function KegList(props) {
   console.log(props);
   return (
     <div>
-      {/* <div className={styles.list}>
+      <div className={styles.list}>
         {props.kegList.map((keg, id) => (
           <Keg {...keg} key={id} />
         ))}
-      </div> */}
+      </div>
       <div className={styles.list}>
         {masterKegList.map((keg, index) => (
           <Keg {...keg} key={index} />
@@ -71,7 +71,7 @@ function KegList(props) {
 
       <hr />
       <h3> All the beer</h3>
-      <div className={styles.list}>
+      {/* <div className={styles.list}>
         {props.kegList.map(keg => (
           <Keg
             name={keg.name}
@@ -84,7 +84,7 @@ function KegList(props) {
             key={keg.id}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

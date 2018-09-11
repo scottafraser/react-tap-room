@@ -4,7 +4,7 @@ import Header from "./Header";
 import Splash from "./Splash";
 import KegList from "./KegList";
 import Error404 from "./Error404";
-import NewKegControl from "./NewKegController";
+import NewKegForm from "./NewKegForm";
 import styles from "./App.css";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
@@ -38,7 +38,7 @@ class Main extends Component {
               <Route
                 path="/NewKegForm"
                 render={() => (
-                  <NewKegControl
+                  <NewKegForm
                     onNewKegCreation={this.handleAddingNewKegToList}
                   />
                 )}
