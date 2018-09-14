@@ -1,6 +1,7 @@
 import React from "react";
 import Snackbar from "material-ui/Snackbar";
 import RaisedButton from "material-ui/RaisedButton";
+import styles from "./App.css";
 
 export default class SnackbarExampleSimple extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class SnackbarExampleSimple extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.kegButton}>
         <RaisedButton
           type="submit"
           onClick={this.handleClick}

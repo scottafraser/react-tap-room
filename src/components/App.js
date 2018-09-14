@@ -7,12 +7,13 @@ import Error404 from "./Error404";
 import NewKegForm from "./NewKegForm";
 import styles from "./App.css";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import masterKegList from "./KegListService";
 
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      addKegList: []
+      addKegList: masterKegList.map(keg => keg)
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
     this.handleDeleteingKeg = this.handleDeleteingKeg.bind(this);

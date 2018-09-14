@@ -5,7 +5,8 @@ const masterKegList = [
     description: "Sparkling Wine & Grapefruit",
     abv: "6.8%",
     price: "7",
-    remaining: "20"
+    remaining: "20",
+    id: 1
   },
   {
     name: "Tart N Juicy",
@@ -13,7 +14,8 @@ const masterKegList = [
     description: "Sour IPA",
     abv: "4.5%",
     price: "6",
-    remaining: "60"
+    remaining: "60",
+    id: 2
   },
   {
     name: "Hamm's",
@@ -21,7 +23,8 @@ const masterKegList = [
     description: "American Lager",
     abv: "4.7%",
     price: "3",
-    remaining: "65"
+    remaining: "65",
+    id: 3
   },
   {
     name: "Prismatic",
@@ -29,7 +32,8 @@ const masterKegList = [
     description: "Juicy IPA",
     abv: "5.9%",
     price: "6",
-    remaining: "75"
+    remaining: "75",
+    id: 4
   },
   {
     name: "Juicy Haze",
@@ -37,7 +41,8 @@ const masterKegList = [
     description: "India Pale Ale",
     abv: "7.5%",
     price: "6",
-    remaining: "18"
+    remaining: "18",
+    id: 5
   },
   {
     name: "8 Hop",
@@ -45,7 +50,8 @@ const masterKegList = [
     description: "Pale Ale",
     abv: "5.5%",
     price: "6",
-    remaining: "58"
+    remaining: "58",
+    id: 6
   }
 ];
 

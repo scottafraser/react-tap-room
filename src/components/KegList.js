@@ -18,12 +18,6 @@ function KegList(props) {
           <Keg {...keg} key={id} onKegDelete={findKeg} />
         ))}
       </div>
-      <div className={styles.list}>
-        {masterKegList.map((keg, index) => (
-          <Keg {...keg} key={index} />
-        ))}
-      </div>
-
       <hr />
       <h3> All the beer</h3>
     </div>
