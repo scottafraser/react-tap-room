@@ -15,7 +15,7 @@ class Main extends Component {
     super(props);
     this.state = {
       addKegList: masterKegList.map(keg => keg),
-      currentKeg: {}
+      currentKeg: "nothing"
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
     this.handleDeleteingKeg = this.handleDeleteingKeg.bind(this);
@@ -30,15 +30,15 @@ class Main extends Component {
   }
 
   findKeg(thisKeg) {
-    let newCurrentKeg = {};
+    console.log(thisKeg.id);
     let newDeleteKegList = this.state.addKegList.slice();
     newDeleteKegList.forEach(function(keg) {
       if (thisKeg.id === keg.id) {
-        newCurrentKeg = keg;
+        let newKeg = keg;
+        this.setState({ currentKeg: newKeg });
       }
     });
-    console.log(this.newCurrentKeg);
-    this.setState({ currentKeg: newCurrentKeg });
+    console.log(this.state.currentKeg);
   }
 
   handleDeleteingKeg(thisKeg) {
@@ -90,7 +90,7 @@ class Main extends Component {
                 )}
               />
               <Route
-                path="/editKegForm/:id"
+                path="/editKegForm/"
                 render={() => <EditKegForm findKeg={this.findKeg} />}
               />
               <Route component={Error404} />

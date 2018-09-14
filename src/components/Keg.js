@@ -32,8 +32,8 @@ function Keg(props) {
           showExpandableButton={true}
         />
         <CardActions>
-          <Link to={"/editKegForm/"}>
-            <FlatButton label="Edit" id={props.id} />
+          <Link to={"/editKegForm"}>
+            <FlatButton label="Edit" id={props.id} onClick={handleKegEdit} />
           </Link>
           <FlatButton label="Delete" id={props.id} onClick={handleKegDelete} />
         </CardActions>
@@ -54,7 +54,8 @@ Keg.propTypes = {
   price: PropTypes.string,
   id: PropTypes.string,
   onKegDelete: PropTypes.func,
-  onKegEdit: PropTypes.func
+  onKegEdit: PropTypes.func,
+  findKeg: PropTypes.func
 };
 
 export default Keg;
