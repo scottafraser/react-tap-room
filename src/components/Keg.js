@@ -4,11 +4,18 @@ import styles from "./App.css";
 import { Card, CardActions, CardHeader, CardText } from "material-ui/Card";
 import FlatButton from "material-ui/FlatButton";
 import beerkeg from "../assets/images/beer-keg.png";
+import { Link } from "react-router-dom";
 
 function Keg(props) {
   function handleKegDelete(event) {
     event.preventDefault();
     props.onKegDelete({
+      id: this.id
+    });
+  }
+  function handleKegEdit(event) {
+    event.preventDefault();
+    props.findKeg({
       id: this.id
     });
   }
@@ -24,7 +31,9 @@ function Keg(props) {
           showExpandableButton={true}
         />
         <CardActions>
-          <FlatButton label="Edit" />
+          <Link to="/EditKegForm">
+            <FlatButton label="Edit" id={props.id} onClick={handleKegEdit} />
+          </Link>
           <FlatButton label="Delete" id={props.id} onClick={handleKegDelete} />
         </CardActions>
         <CardText expandable={true}>
@@ -43,7 +52,8 @@ Keg.propTypes = {
   abv: PropTypes.string,
   price: PropTypes.string,
   id: PropTypes.string,
-  onKegDelete: PropTypes.func
+  onKegDelete: PropTypes.func,
+  onKegEdit: PropTypes.func
 };
 
 export default Keg;

@@ -2,11 +2,16 @@ import React from "react";
 import Keg from "./Keg";
 import styles from "./App.css";
 import PropTypes from "prop-types";
-import masterKegList from "./KegListService";
 
 function KegList(props) {
-  function findKeg(newKeg) {
-    props.foundKeg({
+  function deleteKeg(newKeg) {
+    props.deleteKeg({
+      id: newKeg.id
+    });
+  }
+
+  function editKeg(newKeg) {
+    props.findKeg({
       id: newKeg.id
     });
   }
@@ -15,7 +20,7 @@ function KegList(props) {
     <div>
       <div className={styles.list}>
         {props.kegList.map((keg, id) => (
-          <Keg {...keg} key={id} onKegDelete={findKeg} />
+          <Keg {...keg} key={id} onKegDelete={deleteKeg} findKeg={editKeg} />
         ))}
       </div>
       <hr />
@@ -25,7 +30,9 @@ function KegList(props) {
 }
 
 KegList.propTypes = {
-  foundKeg: PropTypes.func,
+  deleteKeg: PropTypes.func,
+  findKeg: PropTypes.func,
+  // editKeg: PropTypes.func,
   kegList: PropTypes.array,
   currentRouterPath: PropTypes.string
 };
