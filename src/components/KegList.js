@@ -32,7 +32,7 @@ function KegList(props) {
 KegList.propTypes = {
   deleteKeg: PropTypes.func,
   findKeg: PropTypes.func,
-  // editKeg: PropTypes.func,
+  editKeg: PropTypes.func,
   kegList: PropTypes.array,
   currentRouterPath: PropTypes.string
 };

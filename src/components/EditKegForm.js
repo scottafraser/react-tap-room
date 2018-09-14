@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { v4 } from "uuid";
 import styles from "./App.css";
 import Snackbar from "./Snackbar";
-import KegList from "./KegList";
 
 class EditKegForm extends React.Component {
   constructor(props) {
@@ -14,6 +13,10 @@ class EditKegForm extends React.Component {
     this.handleEditKegFormSubmission = this.handleEditKegFormSubmission.bind(
       this
     );
+  }
+
+  componentDidMount() {
+    console.log(this.state.kegToEdit);
   }
 
   handleEditKegFormSubmission(event) {

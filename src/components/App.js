@@ -37,6 +37,7 @@ class Main extends Component {
         newCurrentKeg = keg;
       }
     });
+    console.log(this.newCurrentKeg);
     this.setState({ currentKeg: newCurrentKeg });
   }
 
@@ -89,8 +90,8 @@ class Main extends Component {
                 )}
               />
               <Route
-                path="/EditKegForm"
-                render={() => <EditKegForm findKeg={this.handleEditKeg} />}
+                path="/editKegForm/:id"
+                render={() => <EditKegForm findKeg={this.findKeg} />}
               />
               <Route component={Error404} />
             </Switch>

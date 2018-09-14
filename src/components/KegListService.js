@@ -6,7 +6,7 @@ const masterKegList = [
     abv: "6.8%",
     price: "7",
     remaining: "20",
-    id: 1
+    id: "1"
   },
   {
     name: "Tart N Juicy",
@@ -15,7 +15,7 @@ const masterKegList = [
     abv: "4.5%",
     price: "6",
     remaining: "60",
-    id: 2
+    id: "2"
   },
   {
     name: "Hamm's",
@@ -24,7 +24,7 @@ const masterKegList = [
     abv: "4.7%",
     price: "3",
     remaining: "65",
-    id: 3
+    id: "3"
   },
   {
     name: "Prismatic",
@@ -33,7 +33,7 @@ const masterKegList = [
     abv: "5.9%",
     price: "6",
     remaining: "75",
-    id: 4
+    id: "4"
   },
   {
     name: "Juicy Haze",
@@ -42,7 +42,7 @@ const masterKegList = [
     abv: "7.5%",
     price: "6",
     remaining: "18",
-    id: 5
+    id: "5"
   },
   {
     name: "8 Hop",
@@ -51,7 +51,7 @@ const masterKegList = [
     abv: "5.5%",
     price: "6",
     remaining: "58",
-    id: 6
+    id: "6"
   }
 ];
 

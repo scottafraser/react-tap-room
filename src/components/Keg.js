@@ -13,6 +13,7 @@ function Keg(props) {
       id: this.id
     });
   }
+
   function handleKegEdit(event) {
     event.preventDefault();
     props.findKeg({
@@ -31,8 +32,8 @@ function Keg(props) {
           showExpandableButton={true}
         />
         <CardActions>
-          <Link to="/EditKegForm">
-            <FlatButton label="Edit" id={props.id} onClick={handleKegEdit} />
+          <Link to={"/editKegForm/"}>
+            <FlatButton label="Edit" id={props.id} />
           </Link>
           <FlatButton label="Delete" id={props.id} onClick={handleKegDelete} />
         </CardActions>
