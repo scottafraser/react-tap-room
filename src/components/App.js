@@ -7,7 +7,6 @@ import Error404 from "./Error404";
 import NewKegForm from "./NewKegForm";
 import styles from "./App.css";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import Keg from "./Keg";
 
 class Main extends Component {
   constructor(props) {
@@ -28,10 +27,9 @@ class Main extends Component {
   handleDeleteingKeg(thisKeg) {
     var newDeleteKegList = this.state.addKegList.slice();
     for (let x = 0; x < newDeleteKegList.length; x++) {
-      if (x.id === thisKeg.id) {
-        newDeleteKegList.splice(thisKeg);
-      }
+      newDeleteKegList.splice(thisKeg);
     }
+
     this.setState({ addKegList: newDeleteKegList });
   }
 
@@ -47,7 +45,7 @@ class Main extends Component {
                 path="/kegList"
                 render={() => (
                   <KegList
-                    onKegDelete={this.handleDeleteingKeg}
+                    foundKeg={this.handleDeleteingKeg}
                     kegList={this.state.addKegList}
                   />
                 )}
