@@ -8,7 +8,7 @@
 
 ## Description
 
-A React app that uses interactive flashcards for the purposes of studying various programming concepts and vocabulary.
+A React App that is a refactor of an Angular excersice in building out CRUD and structuring components.
 
 ## Setup on OSX
 
@@ -20,7 +20,7 @@ A React app that uses interactive flashcards for the purposes of studying variou
 
 ## Route Path
 
-![alt text](./route_path.jpg)
+![alt text](./newTree.jpg)
 
 ## Contribution Requirements
 

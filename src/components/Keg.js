@@ -11,7 +11,6 @@ function Keg(props) {
     props.onKegDelete({
       id: this.id
     });
-    console.log(this.id);
   }
 
   return (

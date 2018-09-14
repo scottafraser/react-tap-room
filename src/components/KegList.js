@@ -9,7 +9,6 @@ function KegList(props) {
     props.foundKeg({
       id: newKeg.id
     });
-    console.log(newKeg.id);
   }
 
   return (

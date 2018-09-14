@@ -27,10 +27,9 @@ class Main extends Component {
   handleDeleteingKeg(thisKeg) {
     var newDeleteKegList = this.state.addKegList.slice();
     newDeleteKegList.forEach(function(keg) {
-      console.log(thisKeg.id, keg.id);
       if (thisKeg.id === keg.id) {
         newDeleteKegList.splice(0, 1);
-        alert(keg.name + "deleted");
+        alert(keg.name + " deleted");
       }
     });
     this.setState({ addKegList: newDeleteKegList });
