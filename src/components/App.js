@@ -7,6 +7,7 @@ import Error404 from "./Error404";
 import NewKegForm from "./NewKegForm";
 import styles from "./App.css";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import Keg from "./Keg";
 
 class Main extends Component {
   constructor(props) {
@@ -15,12 +16,23 @@ class Main extends Component {
       addKegList: []
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+    this.handleDeleteingKeg = this.handleDeleteingKeg.bind(this);
   }
 
   handleAddingNewKegToList(newKeg) {
     var newAddKegList = this.state.addKegList.slice();
     newAddKegList.push(newKeg);
     this.setState({ addKegList: newAddKegList });
+  }
+
+  handleDeleteingKeg(thisKeg) {
+    var newDeleteKegList = this.state.addKegList.slice();
+    for (let x = 0; x < newDeleteKegList.length; x++) {
+      if (x.id === thisKeg.id) {
+        newDeleteKegList.splice(thisKeg);
+      }
+    }
+    this.setState({ addKegList: newDeleteKegList });
   }
 
   render() {
@@ -33,7 +45,12 @@ class Main extends Component {
               <Route exact path="/" component={Splash} />
               <Route
                 path="/kegList"
-                render={() => <KegList kegList={this.state.addKegList} />}
+                render={() => (
+                  <KegList
+                    onKegDelete={this.handleDeleteingKeg}
+                    kegList={this.state.addKegList}
+                  />
+                )}
               />
               <Route
                 path="/NewKegForm"

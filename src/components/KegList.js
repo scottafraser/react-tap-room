@@ -55,7 +55,6 @@ const masterKegList = [
 ];
 
 function KegList(props) {
-  console.log(props);
   return (
     <div>
       <div className={styles.list}>
