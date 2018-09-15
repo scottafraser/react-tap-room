@@ -32,7 +32,7 @@ function Keg(props) {
           showExpandableButton={true}
         />
         <CardActions>
-          <Link to={"/editKegForm"}>
+          <Link to={"/editKegForm/:id"} params={{ id: 1 }}>
             <FlatButton label="Edit" id={props.id} onClick={handleKegEdit} />
           </Link>
           <FlatButton label="Delete" id={props.id} onClick={handleKegDelete} />
